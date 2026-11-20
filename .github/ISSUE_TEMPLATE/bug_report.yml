@@ -1,0 +1,41 @@
+name: Bug Report
+description: Laporkan error, perilaku tidak sesuai, atau regresi pada sistem
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      options:
+        - Low (Minor UI / typo)
+        - Medium (Fitur terganggu, ada workaround)
+        - High (Fitur utama gagal berfungsi)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement & Steps to Reproduce
+      description: Jelaskan masalah saat ini dan langkah-langkah untuk mereproduksinya.
+      placeholder: |
+        1. Buka halaman Product Detail
+        2. Pilih varian warna biru
+        3. Harga diskon tidak muncul
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: Apa yang seharusnya terjadi?
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes (Environment, Logs, SKU)
+      placeholder: "Browser: Chrome 130 | Env: Staging | SKU: SKU-99281"
