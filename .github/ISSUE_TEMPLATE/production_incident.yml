@@ -1,0 +1,47 @@
+name: Production Incident
+description: Laporan gangguan kritis pada environment Production
+title: "[INCIDENT] "
+labels: ["incident", "priority:critical"]
+body:
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: Impact Level
+      options:
+        - P0 - Sistem Down Total (Checkout / Login mati)
+        - P1 - Degradasi Berat (Latency tinggi / sebagian fitur gagal)
+        - P2 - Gangguan Minor pada Production
+    validations:
+      required: true
+
+  - type: input
+    id: detected-time
+    attributes:
+      label: Waktu Terdeteksi (WIB)
+      placeholder: "2026-11-20 13:00 WIB"
+    validations:
+      required: true
+
+  - type: textarea
+    id: symptom
+    attributes:
+      label: Gejala & Dampak Pengguna
+      description: Fitur apa yang terdampak dan berapa estimasi user/transaksi yang terkena?
+    validations:
+      required: true
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigasi Sementara / Root Cause Awal
+      placeholder: "Rollback deployment v2.4.1 atau flush Redis cache..."
+
+  - type: checkboxes
+    id: incident-checklist
+    attributes:
+      label: Incident Response Checklist
+      options:
+        - label: Alert sudah dikonfirmasi di Grafana / monitoring tool
+          required: true
+        - label: Channel koordinasi incident sudah dibuat
+        - label: Post-mortem document dijadwalkan setelah sistem pulih
