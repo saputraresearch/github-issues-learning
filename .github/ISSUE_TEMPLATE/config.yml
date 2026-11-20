@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Diskusi & Tanya Jawab Teknis
+    url: https://github.com/username/github-issues-learning/discussions
+    about: Gunakan Discussions untuk pertanyaan umum sebelum membuat Issue baru.
