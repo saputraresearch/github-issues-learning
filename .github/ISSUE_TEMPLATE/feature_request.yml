@@ -1,0 +1,45 @@
+name: Feature Request
+description: Usulkan fitur baru atau kapabilitas produk baru
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: Mengapa fitur ini dibutuhkan dan apa dampak bisnis/penggunanya?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Keterbatasan apa yang ada saat ini?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: Gambaran hasil akhir setelah fitur selesai dibangun.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      value: |
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Notes
+      description: Endpoint API, strategi caching, atau dependensi antar-service.
