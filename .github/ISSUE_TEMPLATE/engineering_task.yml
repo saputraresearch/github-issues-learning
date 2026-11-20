@@ -1,0 +1,41 @@
+name: Engineering Task
+description: Tugas teknis seperti API automation, refactoring, atau optimasi performa
+title: "[TASK] "
+labels: ["engineering-task"]
+body:
+  - type: dropdown
+    id: task-category
+    attributes:
+      label: Task Category
+      options:
+        - QA Automation / Testing
+        - Performance Improvement
+        - Tech Debt / Refactoring
+        - Infrastructure / CI-CD
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background & Problem Statement
+      description: Konteks teknis mengapa pekerjaan ini perlu dilakukan sekarang.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria (Definition of Done)
+      value: |
+        - [ ] Unit/integration test coverage memenuhi standar
+        - [ ] Tidak ada regresi pada pipeline CI/CD
+        - [ ] Dokumentasi teknis diperbarui
+    validations:
+      required: true
+
+  - type: input
+    id: target-service
+    attributes:
+      label: Target Repository / Service
+      placeholder: "contoh: product-review-service"
